@@ -1,15 +1,15 @@
-require("dotenv").config()
+require('dotenv').config()
 const {
     MONGO_HOSTNAME,
     MONGO_DB,
     MONGO_PORT,
     TARGET,
     PORT
-} = process.env;
+} = process.env
 
 
 
-module.exports={
+module.exports = {
     MONGO_HOSTNAME,
     MONGO_DB,
     MONGO_PORT,

@@ -1,0 +1,1 @@
+the docker-compose files here for prod and dev enviroments, its contents just have to overwrite the docker-compose files in the root folder

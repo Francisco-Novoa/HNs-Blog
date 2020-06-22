@@ -1,27 +1,27 @@
-import React, { useState } from "react"
-import { deleteBlog } from "./services/blogAPI"
-import { dateFormater } from "./services/dateFormater"
-import { List, ListItem, ListItemSecondaryAction, IconButton, Link, Typography, Grid, makeStyles } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
+import React, { useState } from 'react'
+import { deleteBlog } from './services/blogAPI'
+import { dateFormater } from './services/dateFormater'
+import { List, ListItem, ListItemSecondaryAction, IconButton, Link, Typography, Grid, makeStyles } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const useStyles = makeStyles({
     rowStyle: {
-        backgroundColor: "#FFF",
-        borderWidth: "1px",
-        borderColor: "#CCC",
+        backgroundColor: '#FFF',
+        borderWidth: '1px',
+        borderColor: '#CCC',
     },
     rowStyleHover: {
-        backgroundColor: "#fafafa",
-        borderWidth: "1px",
-        borderColor: "#CCC"
+        backgroundColor: '#fafafa',
+        borderWidth: '1px',
+        borderColor: '#CCC'
     },
     titleTime: {
-        color: "#333",
-        fontSize: "13pt",
-        marginRight: "0.5rem",
+        color: '#333',
+        fontSize: '13pt',
+        marginRight: '0.5rem',
     },
     author: {
-        color: "#999"
+        color: '#999'
     },
 })
 
@@ -33,7 +33,7 @@ const RemoveBlog = ({ id, setBlogs, blogs }) => {
     return (
 
         <ListItemSecondaryAction onClick={() => { clickHandler() }}>
-            <IconButton edge="end" aria-label="delete">
+            <IconButton edge='end' aria-label='delete'>
                 <DeleteIcon />
             </IconButton>
         </ListItemSecondaryAction>
@@ -59,10 +59,10 @@ const Row = ({ title, author, id, url, setBlogs, blogs, date }) => {
                         <Grid item sm={11} container>
 
                             <Link href={url}
-                                color="primary"
-                                underline="hover"
-                                target="_blank"
-                                rel="noopener" >
+                                color='primary'
+                                underline='hover'
+                                target='_blank'
+                                rel='noopener' >
                                 <Typography
                                     className={classes.titleTime}>
                                     {title}.
@@ -70,8 +70,8 @@ const Row = ({ title, author, id, url, setBlogs, blogs, date }) => {
                             </Link>
 
                             <Link href={url}
-                                target="_blank"
-                                rel="noopener">
+                                target='_blank'
+                                rel='noopener'>
                                 <Typography
                                     className={classes.author}>
                                     {`-${author}-`}
@@ -80,7 +80,7 @@ const Row = ({ title, author, id, url, setBlogs, blogs, date }) => {
 
                         </Grid>
 
-                        <Grid item container justify="center" sm={1} >
+                        <Grid item container justify='center' sm={1} >
                             <Typography
                                 className={classes.titleTime}>
                                 {time}

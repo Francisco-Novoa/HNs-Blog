@@ -1,7 +1,7 @@
-const config = require("./config")
-const axios = require("axios")
-const { info } = require("./logger")
-const Blog = require("../models/blogs")
+const config = require('./config')
+const axios = require('axios')
+const { info } = require('./logger')
+const Blog = require('../models/blogs')
 
 const parseData = async blogs => {
     //receives raw query to the API and extracts the values i need
@@ -31,7 +31,7 @@ const normalizeBlogs = (data) => {
 
 const normalizeData = async data => {
     //validates the data
-    
+
     //sorts the blogs so every blog with equal id are adjacent
     const sorted = orderBlogs(data)
     //removes everyblog with missing names
@@ -51,12 +51,12 @@ const normalizeData = async data => {
 
 const getBlog = async () => {
     info(`fetching data from ${config.TARGET}`)
-    info("-----")
-    //calls the functions that fetchs the blogs from the API 
+    info('-----')
+    //calls the functions that fetchs the blogs from the API
     const blogs = await axios.get(config.TARGET)
     //extracts only the elements i need from the data
     const parsedData = await parseData(blogs.data.hits)
-    //check that all the needed fields are there and removes repeated elements 
+    //check that all the needed fields are there and removes repeated elements
     const normalizedData = await normalizeData(parsedData)
     return normalizedData
 }
