@@ -1,7 +1,7 @@
 const blogRouter = require('express').Router()
 const Blog = require('../models/blogs')
 const { info, error } = require('../utils/logger')
-const autoLoader = require('../utils/getBlogs')
+const { autoLoader } = require('../utils/getBlogs')
 
 blogRouter.get('/', async (request, response) => {
     //find all the blogs that have not been flagged as removed

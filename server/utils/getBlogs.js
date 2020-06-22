@@ -29,7 +29,7 @@ const normalizeBlogs = (data) => {
     })
 }
 
-const normalizeData = async data => {
+const normalizeData = data => {
     //validates the data
 
     //sorts the blogs so every blog with equal id are adjacent
@@ -67,4 +67,11 @@ const autoLoader = async () => {
     return Blog.insertMany(blogs, { ordered: false, rawResult: true })
 }
 
-module.exports = autoLoader
+module.exports = {
+    autoLoader,
+    parseData,
+    orderBlogs,
+    normalizeBlogs,
+    normalizeData,
+    getBlog
+}

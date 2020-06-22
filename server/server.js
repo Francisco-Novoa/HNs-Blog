@@ -16,7 +16,7 @@ const app = express()
 
 const cors = require('cors')
 
-const autoLoader = require('./utils/getBlogs')
+const { autoLoader } = require('./utils/getBlogs')
 
 //here the controllers are imported
 
@@ -56,7 +56,6 @@ const CLIENT_BUILD_PATH = path.join(__dirname, '../client/build')
 
 // Static files
 app.use(express.static(CLIENT_BUILD_PATH))
-
 
 //here go the controllers
 

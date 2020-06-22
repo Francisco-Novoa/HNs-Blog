@@ -2,3 +2,4 @@ node_modules
 .eslintrc
 Dockerfile
 docker-compose-yml
+getBlogs.test.js
