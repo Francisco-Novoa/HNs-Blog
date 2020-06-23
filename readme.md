@@ -34,39 +34,39 @@ El proyecto consta de 2 partes.
 ##### Cómo Utilizarlo.
  
 - Modo Producción
-    0. En una máquina con Docker funcionando
-    1. Git clone https://gitlab.com/Francisco-Novoa/reigntest
-    2. `cd reigntest`
-    3. `docker-compose build` desde la carpeta Raiz
-    4. `docker-compose up`
-    5. Abre en el navegador http://localhost:8080/
+    1. En una máquina con Docker funcionando
+    2. Git clone https://gitlab.com/Francisco-Novoa/reigntest
+    3. `cd reigntest`
+    4. `docker-compose build` desde la carpeta Raiz
+    5. `docker-compose up`
+    6. Abre en el navegador http://localhost:8080/
        La primera carga obligará al server a hacer fetch para poblar la base de datos.
        Así que si se recarga la página, el Client debiera estar funcional.
-    6. El Server no filtra entradas con nombres repetidos así que si hay muy pocos es por que la API 
+    7. El Server no filtra entradas con nombres repetidos así que si hay muy pocos es por que la API 
     externa ha enviado muchos artículos repetidos y el Server los ha ignorado
-    7. En Modo Producción el Server entrega el bundle producido por npm run build de Create React App,
+    8. En Modo Producción el Server entrega el bundle producido por npm run build de Create React App,
     es posible ver el server de desarrollo usando modo Desarrollo
  
 
 
 - Modo Desarrollo
-    0. Asumamos que el proyecto está clonado de ahora en adelante
-    1. Anda a ./dockerfiles y copia los contenidos de docker-compose.dev.yml en elarchivo
+    1. Asumamos que el proyecto está clonado de ahora en adelante
+    2. Anda a ./dockerfiles y copia los contenidos de docker-compose.dev.yml en elarchivo
     docker-compose.yml que esta en la carpeta raíz del proyecto, los datos que estas sobre escribiendo estan en docker-compose.prod.yml
-    2. `docker-compose build` desde la carpeta raíz
-    3. `docker-compose up`
-    4. Ahora la aplicación de React estará en http://localhost:3000/, la aplicación de Node.js en http://localhost:8080/
-    5. Si se quisiese seguir desarrollando la aplicación se debería volver a correr los pasos 2 y 3 después de cada cambio, 
+    3. `docker-compose build` desde la carpeta raíz
+    4. `docker-compose up`
+    5. Ahora la aplicación de React estará en http://localhost:3000/, la aplicación de Node.js en http://localhost:8080/
+    6. Si se quisiese seguir desarrollando la aplicación se debería volver a correr los pasos 2 y 3 después de cada cambio, 
     modo Solo Backend permite usar docker para crear el Server y usar el *hot loading* que ofrece Create React App.
  
 
 
 - Modo Solo Backend
-    0. Asumiremos que la maquina tiene Node.js instalado
-    1. Abrir la carpeta Client en su editor de código favorito, yo uso VSCode.
-    2. Ejecute `npm run start` para iniciar el servidor de desarrollo de Create React App
-    3. `docker-compose build` desde la carpeta raiz esto creara la imagen solo del Server y de MongoDB
-    4. `docker-compose up`
+    1. Asumiremos que la maquina tiene Node.js instalado
+    2. Abrir la carpeta Client en su editor de código favorito, yo uso VSCode.
+    3. Ejecute `npm run start` para iniciar el servidor de desarrollo de Create React App
+    4. `docker-compose build` desde la carpeta raiz esto creara la imagen solo del Server y de MongoDB
+    5. `docker-compose up`
  
 
  
