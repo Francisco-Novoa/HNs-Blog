@@ -4,7 +4,7 @@
  
 #### Que es?
  
-el proyecto consta de 2 partes. 
+El proyecto consta de 2 partes. 
 - Client
 - Server
  
@@ -37,13 +37,13 @@ el proyecto consta de 2 partes.
     0. En una máquina con Docker funcionando
     1. Git clone https://gitlab.com/Francisco-Novoa/reigntest
     2. <cd reigntest>
-    3. <docker-compose build>
+    3. <docker-compose build> desde la carpeta Raiz
     4. <docker-compose up>
-    5. abre en el navegador http://localhost:8080/
-       la primera carga obligará al server a hacer fetch para poblar la base de datos.
-       así que si se recarga la página, el cliente debiera estar funcional.
-    6. el servidor no guarda entradas repetidas así que si hay muy pocos es por que la API 
-    externa ha enviado muchos artículos repetidos y el servidor los ha ignorado
+    5. Abre en el navegador http://localhost:8080/
+       La primera carga obligará al server a hacer fetch para poblar la base de datos.
+       Así que si se recarga la página, el Client debiera estar funcional.
+    6. El Server no filtra entradas con nombres repetidos así que si hay muy pocos es por que la API 
+    externa ha enviado muchos artículos repetidos y el Server los ha ignorado
     7. En Modo Producción el Server entrega el bundle producido por npm run build de Create React App,
     es posible ver el server de desarrollo usando modo Desarrollo
  
@@ -54,7 +54,7 @@ el proyecto consta de 2 partes.
     2. <docker-compose build> desde la carpeta raíz
     3. <docker-compose up>
     4. Ahora la aplicación de React estará en http://localhost:3000/, la aplicación de Node.js en http://localhost:8080/
-    5. si se quisiese seguir desarrollando la aplicación se debería volver a correr los pasos 2 y 3 después de cada cambio, 
+    5. Si se quisiese seguir desarrollando la aplicación se debería volver a correr los pasos 2 y 3 después de cada cambio, 
     modo Solo Backend permite usar docker para crear el Server y usar el *hot loading* que ofrece Create React App.
  
 - Modo Solo Backend
@@ -70,5 +70,6 @@ el proyecto consta de 2 partes.
  
  - El proyecto usa una pipeline de Gitlab que construye el proyecto, y realiza tests y linting
  - Si el Client no muestra más que el Header, una recarga debería bastar para poblar la base de datos.
- - la fuente de los textos no es exactamente la misma que la de el wireframe, use la que recomienda Material-UI, Roboto.
+ - La fuente de los textos no es exactamente la misma que la de el wireframe, use la que recomienda Material-UI, Roboto.
+ - Para ver el *Test Coverage* ejecuten <npm run coverage> desde la carpeta ./server
 
