@@ -9,14 +9,21 @@ install:
     image: node:10.16-alpine
     script:
         - npm install
+        - cd ./client
+        - npm ci
+        - cd ..
+        - cd ./server
+        - npm ci
     artifacts:
         name: "artifacts"
         untracked: true
         expire_in: 30 mins 
         paths:
             - .npm/
-            - node_modules 
+            - client/node_modules 
+            - server/node_modules
 lint:
+    image: node:10.16-alpine
     stage: lint
     script:
         - cd ./client
@@ -26,6 +33,7 @@ lint:
         - npm run eslint
 
 test:
+    image: node:10.16-alpine
     stage: test
     script:
         - cd ./server
