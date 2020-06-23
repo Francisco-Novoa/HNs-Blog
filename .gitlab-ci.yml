@@ -1,9 +1,13 @@
-#asdasf
+# there are 3 stages, 
+# install that creates installs the dependencies and saves the artifacts, 
+# lint that runs the linters,
+# and test that runs the tests of the server
 
 stages:
     - install
     - lint
     - test
+
 install:
     stage: install
     image: node:10.16-alpine
@@ -19,9 +23,9 @@ install:
         untracked: true
         expire_in: 30 mins 
         paths:
-            - .npm/
             - client/node_modules 
             - server/node_modules
+
 lint:
     image: node:10.16-alpine
     stage: lint
