@@ -47,6 +47,8 @@ El proyecto consta de 2 partes.
     7. En Modo Producción el Server entrega el bundle producido por npm run build de Create React App,
     es posible ver el server de desarrollo usando modo Desarrollo
  
+
+
 - Modo Desarrollo
     0. Asumamos que el proyecto está clonado de ahora en adelante
     1. Anda a ./dockerfiles y copia los contenidos de docker-compose.dev.yml en elarchivo
@@ -57,6 +59,8 @@ El proyecto consta de 2 partes.
     5. Si se quisiese seguir desarrollando la aplicación se debería volver a correr los pasos 2 y 3 después de cada cambio, 
     modo Solo Backend permite usar docker para crear el Server y usar el *hot loading* que ofrece Create React App.
  
+
+
 - Modo Solo Backend
     0. Asumiremos que la maquina tiene node.js instalado
     1. Abrir la carpeta Client en su editor de código favorito, yo uso VSCode.
