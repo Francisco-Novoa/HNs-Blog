@@ -62,7 +62,7 @@ El proyecto consta de 2 partes.
 
 
 - Modo Solo Backend
-    0. Asumiremos que la maquina tiene node.js instalado
+    0. Asumiremos que la maquina tiene Node.js instalado
     1. Abrir la carpeta Client en su editor de código favorito, yo uso VSCode.
     2. Ejecute `npm run start` para iniciar el servidor de desarrollo de Create React App
     3. `docker-compose build` desde la carpeta raiz esto creara la imagen solo del Server y de MongoDB
