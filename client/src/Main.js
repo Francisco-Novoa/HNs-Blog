@@ -125,7 +125,5 @@ export default function Main({ blogs, setBlogs }) {
                 )
             }
         </List>
-
-
     )
 }
