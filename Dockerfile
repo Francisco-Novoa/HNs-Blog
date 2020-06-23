@@ -1,3 +1,4 @@
+
 # Stage 1: Build react client
 FROM node:10.16-alpine as client
 
