@@ -1,0 +1,23 @@
+stages:
+    - lint
+    - test
+
+lint:
+    stage: lint
+    script:
+        - cd ./client
+        - npm ci
+        - npm run eslint
+        - cd ..
+        - cd server
+        - npm ci
+        - npm run eslint
+    artifacts:
+        paths:
+            - ./client/node_modules
+            - ./server/node_modules
+test:
+    stage: test
+    script:
+        - cd server
+        - npm run test
