@@ -1,10 +1,12 @@
+#asdasf
+
 stages:
     - install
-    - build
     - lint
     - test
 install:
     stage: install
+    image: node:10.16-alpine
     script:
         - npm install
     artifacts:
