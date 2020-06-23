@@ -1,23 +1,30 @@
 stages:
+    - install
+    - build
     - lint
     - test
-
+install:
+    stage: install
+    script:
+        - npm install
+    artifacts:
+        name: "artifacts"
+        untracked: true
+        expire_in: 30 mins 
+        paths:
+            - .npm/
+            - node_modules 
 lint:
     stage: lint
     script:
         - cd ./client
-        - npm ci
         - npm run eslint
         - cd ..
-        - cd server
-        - npm ci
+        - cd ./server
         - npm run eslint
-    artifacts:
-        paths:
-            - ./client/node_modules
-            - ./server/node_modules
+
 test:
     stage: test
     script:
-        - cd server
+        - cd ./server
         - npm run test
