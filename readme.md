@@ -68,7 +68,7 @@ El proyecto consta de 2 partes.
  
 ##### Consideraciones Extra
  
- - El proyecto usa una pipeline de Gitlab que construye el proyecto, y realiza tests y linting
+ - El proyecto usa una pipeline de GitLab que construye el proyecto, realiza tests y linting
  - Si el Client no muestra más que el Header, una recarga debería bastar para poblar la base de datos.
  - La fuente de los textos no es exactamente la misma que la de el wireframe, use la que recomienda Material-UI, Roboto.
  - Para ver el *Test Coverage* ejecute `npm run coverage` desde la carpeta ./server
