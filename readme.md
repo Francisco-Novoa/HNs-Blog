@@ -12,10 +12,10 @@ El proyecto consta de 2 partes.
  
 ##### Client
  
-- Una aplicación hecha en **ReactJS** basada en un wireframe proveído
-- Los Estilos fueron entregados y fueron aplicados usando la librería **Material-UI**
-- El Client muestra los datos proveídos por el Server
-- La Aplicación se encuentra **Dockerizada** y utiliza **ESLint**
+- Una aplicación hecha en **ReactJS** basada en un wireframe provisto
+- Los estilos fueron entregados y fueron aplicados usando la librería **Material-UI**
+- El Client muestra los datos entregados por el Server
+- La aplicación se encuentra **Dockerizada** y utiliza **ESLint**
  
  
  
@@ -27,7 +27,7 @@ El proyecto consta de 2 partes.
   para obtener los artículos de Hacker News
 - La aplicación consume los datos y con ellos presenta un rest API disponible para el Client.
 - El Server esta **Dockerizado** y utilizando **ESLint**
-- El Server fue testeado usando Jest tiene un 73% de *test coverage* de acuerdo a <jest --coverage 
+- El Server fue testeado usando Jest tiene un 73% de *test coverage* de acuerdo a `jest --coverage`
  
  
  
